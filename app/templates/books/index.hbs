@@ -6,10 +6,10 @@ Here Are The List Of Books Fetched From The Server
           <li>{{{book.title}}}</li>
       {{/each}}
     </ul>
-    <h2>Oldbooks:</h2>
+    <h2>Filtered Books:</h2>
     <ul>
-      {{#each model.oldbooks as |oldbook|}}
-          <li>{{{oldbook.title}}}</li>
+      {{#each model.filteredBooks as |aFilteredBook|}}
+          <li>{{{aFilteredBook.title}}}</li>
       {{/each}}
     </ul>
 </ul>
