@@ -21,6 +21,17 @@ module.exports = function (app) {
         "authors": [2],
         "publisher": 1,
         "reviews": [4, 5, 6]
+      },
+
+      {
+        "id": 4,
+        "title": "First Some Other Book On Ember.js",
+        "isbn": "ISBN2",
+        "pages": 200,
+        "description": "Some Description",
+        "authors": [2],
+        "publisher": 1,
+        "reviews": [4, 5, 6]
       }
     ]
   };

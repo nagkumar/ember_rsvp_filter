@@ -1,3 +1,8 @@
+After starting the Server go to URL: http://localhost:4200/books
+
+See the code in 'app\routes\books\index.js' and  'app\templates\books\index.hbs'
+
+
 # Example1
 
 This README outlines the details of collaborating on this Ember application.
