@@ -1,0 +1,15 @@
+Here Are The List Of Books Fetched From The Server
+<ul>
+    <h2>Books:</h2>
+    <ul>
+      {{#each model.books as |book|}}
+          <li>{{{book.title}}}</li>
+      {{/each}}
+    </ul>
+    <h2>Oldbooks:</h2>
+    <ul>
+      {{#each model.oldbooks as |oldbook|}}
+          <li>{{{oldbook.title}}}</li>
+      {{/each}}
+    </ul>
+</ul>
