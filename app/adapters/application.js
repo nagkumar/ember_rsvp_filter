@@ -5,4 +5,3 @@ export default DS.RESTAdapter.extend({
     return true;
   }
 });
-
