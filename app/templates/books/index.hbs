@@ -16,7 +16,7 @@ Here Are The List Of Books Fetched From The Server
     <h2>Filtered Sorted Books:</h2>
     <ul>
       {{#each model.filteredBooksSorted as |aFilteredBook|}}
-          <li>{{{aFilteredBook.title}}}</li>
+          <li>{{{aFilteredBook.title}}} 'id: {{aFilteredBook.id}}'</li>
       {{/each}}
     </ul>
 </ul>
