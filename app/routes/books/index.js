@@ -20,10 +20,7 @@ export default Ember.Route.extend({
   model: function () {
     return Ember.RSVP.hash({
       books: this.store.findAll('book'),
-      filteredBooks: this.store.filter('book', {}, function (aBook) {
-        return aBook.get('isbn') === "ISBN2";
-      }),
-
+      filteredBooks: filter.call(this),
       filteredBooksSorted: sort.call(this)
     });
   }
