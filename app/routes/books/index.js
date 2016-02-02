@@ -7,23 +7,25 @@ function filter() {
 }
 
 function sort() {
-  return filter.call(this).then(sortByTitle);
+  var storeRef = this.store;
+  return storeRef.findAll('book').then(function () {
+    return storeRef.filter('book', function (record) {
+      return record.get('isbn') === 'ISBN2';
+    }).then(function (books) {
+      return books.sortBy('title');
+    });
+  });
 }
-
-function sortByTitle(items) { //add the sort method here..
-  return items;
-}
-
 export default Ember.Route.extend({
+
   model: function () {
-    var _this = this;
     return Ember.RSVP.hash({
       books: this.store.findAll('book'),
       filteredBooks: this.store.filter('book', {}, function (aBook) {
         return aBook.get('isbn') === "ISBN2";
       }),
 
-      filteredBooksSorted: sort.call(_this)
+      filteredBooksSorted: sort.call(this)
     });
   }
 });
