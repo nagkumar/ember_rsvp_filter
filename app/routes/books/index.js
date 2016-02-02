@@ -23,5 +23,11 @@ export default Ember.Route.extend({
       filteredBooks: filter.call(this),
       filteredBooksSorted: sort.call(this)
     });
+  },
+
+  afterModel: function (model) {
+    Ember.Logger.info("All:" + model.books.get('length'), model.books);
+    Ember.Logger.info("Filtered:" + model.filteredBooks.get('length'), model.filteredBooks);
+    Ember.Logger.info("Sorted:" + model.filteredBooksSorted.length, model.filteredBooksSorted);
   }
 });
