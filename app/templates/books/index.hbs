@@ -6,17 +6,6 @@ Here Are The List Of Books Fetched From The Server
           <li>{{{book.title}}}</li>
       {{/each}}
     </ul>
-    <h2>Filtered Books:</h2>
-    <ul>
-      {{#each model.filteredBooks as |aFilteredBook|}}
-          <li>{{{aFilteredBook.title}}}</li>
-      {{/each}}
-    </ul>
-
-    <h2>Filtered Sorted Books:</h2>
-    <ul>
-      {{#each model.filteredBooksSorted as |aFilteredBook|}}
-          <li>{{{aFilteredBook.title}}} 'id: {{aFilteredBook.id}}'</li>
-      {{/each}}
-    </ul>
+  {{partial "books/p1index"}}
+  {{partial "books/p2index"}}
 </ul>

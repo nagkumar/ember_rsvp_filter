@@ -1,0 +1,6 @@
+<h2>Filtered Sorted Books:</h2>
+<ul>
+  {{#each model.filteredBooksSorted as |aFilteredBook|}}
+      <li>{{{aFilteredBook.title}}} 'id: {{aFilteredBook.id}}'</li>
+  {{/each}}
+</ul>
